@@ -1,0 +1,8 @@
+@if(error){
+<h1 style="color: red">Failed loading Todo list</h1>
+} @for(todo of todos; track $index){
+<div>
+  <input type="checkbox" [checked]="todo.checked" />
+  {{ todo.title }}
+</div>
+}
